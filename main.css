@@ -1,0 +1,18 @@
+html {
+    box-sizing: border-box;
+    font-family:'PT Sans', sans-serif;
+}
+*, *::before, *::after {
+	box-sizing:inherit;
+}
+table {
+  background: url('manpreet.jpg');
+  background-repeat:no-repeat;
+  height:400px;
+  width:600px;
+  /*background-size: contain; */
+  margin: 0 auto;
+}
+
+/* I am unable to understand why the players and the board image is not appearing 
+
