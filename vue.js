@@ -34,7 +34,7 @@ let board = [
       53: {end: 92},
     }
   }
-  //board logic written according to the image of the board.
+  //board logic written according to the image of the board in accordance with the snakes and ladders on the image.
   ];
   //I have provided my image link  for the board but i am unable to get it on the page so i am unable to proceed further. 
   
