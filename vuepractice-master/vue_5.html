@@ -13,9 +13,10 @@
 	
 	<div id="app">
 		<div v-bind:class="{box:true, hidden:boxHidden}">{{message}}</div>
-		<button v-on:click="showhide();">Click</button>
+		<button v-on:click="showhide();">Show/Hide</button>
+        <div v-on:mouseenter="hoverbigger()" class="box--red" v-bind:style="{'height': hoverBoxHeight + 'px'}" ></div>
 	</div>
-	
+	<!-- no box is showing up for me-->
 	<script>
 	var app = new Vue({
 		el: '#app',
@@ -24,17 +25,28 @@
 			boxHeight:200,
 			boxHidden : false,
 			message  : 'Make me disappear!'
+            buttonMessage : 'Hide',
+			hoverBoxHeight: 100
 		},
 		methods:{
 			showhide : function(){
 				console.log(this.boxHidden);
 				if(this.boxHidden){
 					this.boxHidden=false;
+                    
 				}else{
-					this.boxHidden=true;	
+					this.boxHidden=true;
+                                        
 				}
 			}
-		}
+		},
+        hoverbigger: function () {
+
+
+
+				this.hoverBoxHeight += 10;
+				console.log(this.hoverBoxHeight);
+			}
 		
 	});
 	</script>
